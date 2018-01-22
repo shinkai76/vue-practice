@@ -1,8 +1,8 @@
 <template>
 <li class="container">
-  <div v-for="item in items">
+  <div v-for="(item,index) in items">
     <div class="clearfix">
-      <input type="button" value="删除" class="btn btn-delete">
+      <input type="button" value="删除" class="btn btn-delete" >
       <a href="#">{{item.title}}</a>
     </div>
     <p>{{item.content}}</p>
@@ -27,6 +27,8 @@ export default {
       ]
     }
   },
+  props:['pMsg','pDairy'],
+
 }
 </script>
 

@@ -4,7 +4,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './assets/base.less'
-import eventbus from './assets/bus'
 
 Vue.config.productionTip = false
 

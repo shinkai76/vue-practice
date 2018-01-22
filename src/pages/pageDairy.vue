@@ -4,18 +4,19 @@
       <input class="title-input" type="text" v-model.lazy="msg" v-show="show" @keyup.enter="on_show" placeholder="输入新标题" autofocus>
       <span v-show="show">按Enter确认</span>
       <h2 :class="{title:true,hidetitle:isHide}" @click="on_show">{{msg}}</h2>
-      <textarea name="name" rows="8" v-model="dairy" @keyup="on_submit"></textarea>
+      <textarea name="name" rows="8" v-model="dairy" @keyup.enter="on_submit"></textarea>
 
     </div>
 
     <ul>
-      <li is="DairyWritten"></li>
+      <li is="DairyWritten" :pMsg="msg" :pDairy="dairy"></li>
     </ul>
   </div>
 </template>
 
 <script>
 import DairyWritten from '../components/DairyWritten.vue'
+
 export default {
   name: 'pageDairy',
   data () {
@@ -23,7 +24,7 @@ export default {
       msg:'Undefined',
       show:false,
       isHide:false,
-      dairy:'新日记',
+      dairy:'默认内容'
     }
   },
   components:{
@@ -35,10 +36,11 @@ export default {
       this.isHide = !this.isHide;
     },
     on_submit:function () {
+
       this.msg= '新一篇的标题未定义'
       this.dairy = '再来一篇?'
     }
-  }
+  },
 }
 </script>
 
