@@ -20,18 +20,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-*{
-  box-sizing: border-box;
-}
 
 a{
   display: block;
-  text-decoration: none;
-  color:#383e46;
-  &:hover{
-    color:#e4705c;
-    transition: all ease 0.3s;
-  }
 }
 
 .card{
