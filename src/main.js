@@ -7,6 +7,8 @@ import './assets/base.less'
 
 Vue.config.productionTip = false
 
+window.bus = new Vue()
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

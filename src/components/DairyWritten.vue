@@ -1,13 +1,15 @@
 <template>
-<li class="container">
-  <div v-for="(item,index) in items">
-    <div class="clearfix">
-      <input type="button" value="删除" class="btn btn-delete" >
-      <a href="#">{{item.title}}</a>
-    </div>
-    <p>{{item.content}}</p>
-  </div>
-</li>
+  <ul>
+    <li class="container" v-for="(item,index) in items">
+      <div>
+        <div class="clearfix">
+          <input type="button" value="删除" class="btn btn-delete" >
+          <a href="#">{{item.title}}</a>
+        </div>
+        <p>{{item.content}}</p>
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -28,6 +30,7 @@ export default {
     }
   },
   props:['pMsg','pDairy'],
+
 
 }
 </script>

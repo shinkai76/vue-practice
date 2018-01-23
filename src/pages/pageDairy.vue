@@ -1,15 +1,28 @@
 <template>
   <div class="dairy">
     <div class="container">
-      <input class="title-input" type="text" v-model.lazy="msg" v-show="show" @keyup.enter="on_show" placeholder="输入新标题" autofocus>
-      <span v-show="show">按Enter确认</span>
-      <h2 :class="{title:true,hidetitle:isHide}" @click="on_show">{{msg}}</h2>
-      <textarea name="name" rows="8" v-model="dairy" @keyup.enter="on_submit"></textarea>
-
+      <input
+        class="title-input" type="text" placeholder="输入新标题" autofocus
+        v-model.lazy="msg"
+        v-show="show"
+        @keyup.enter="on_show">
+      <span
+        v-show="show">按Enter确认
+      </span>
+      <h2
+        :class="{title:true,hidetitle:isHide}"
+        @click="on_show">{{msg}}
+      </h2>
+      <textarea
+        v-model="dairy"
+        @keyup.enter="on_submit">
+      </textarea>
     </div>
 
-    <ul>
-      <li is="DairyWritten" :pMsg="msg" :pDairy="dairy"></li>
+    <ul
+      is="DairyWritten"
+      :pMsg="msg"
+      :pDairy="dairy">
     </ul>
   </div>
 </template>

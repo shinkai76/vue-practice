@@ -32,6 +32,7 @@ a{
   line-height: 30vh;
   border:1px solid #383e46;
   margin:0 5%;
+  text-align: center;
   &:hover{
     border:1px solid #e4705c;
     transition: all ease 0.3s;
