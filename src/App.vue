@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    这句话每页都有的吗
+    <a href="/">首页</a>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+
 }
 
 </script>

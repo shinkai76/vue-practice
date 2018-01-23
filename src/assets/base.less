@@ -88,7 +88,7 @@ a{
 }
 ////////////////////////////////////////////
 @maincolor:#e4705c;
-@subcolor:#383e46;;
+@subcolor:#383e46;
 
 .btn{
   height: 30px;
@@ -99,5 +99,22 @@ a{
   outline: none;
   &:hover{
     background-color: darken(@maincolor,8%);
+  }
+  &-rest{
+    background-color: #fff;
+    border:1px solid @maincolor;
+    color:@maincolor;
+    &:hover{
+      color:#fff;
+    }
+  }
+  &-delete{
+    background-color: #fff;
+    color: #ccc;
+    border:1px solid #ccc;
+    &:hover{
+      background-color: #fff;
+      color: #333;
+    }
   }
 }

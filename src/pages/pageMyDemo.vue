@@ -35,5 +35,9 @@ export default {
   width: 70vw;
   margin:0 auto;
   overflow: hidden;
+
+}
+h1{
+  text-align: center;
 }
 </style>
