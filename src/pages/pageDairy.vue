@@ -3,11 +3,11 @@
     <div class="container">
       <input
         class="title-input" type="text" placeholder="输入新标题" autofocus
-        v-model.lazy="msg"
-        v-show="show"
+        v-model="msg"
+        v-if="show"
         @keyup.enter="on_show">
       <span
-        v-show="show">按Enter确认
+        v-if="show">按Enter确认
       </span>
       <h2
         :class="{title:true,hidetitle:isHide}"
@@ -15,14 +15,12 @@
       </h2>
       <textarea
         v-model="dairy"
-        @keyup.enter="on_submit">
+        @keyup.enter="on_submit(msg,dairy)">
       </textarea>
     </div>
 
     <ul
-      is="DairyWritten"
-      :pMsg="msg"
-      :pDairy="dairy">
+      is="DairyWritten">
     </ul>
   </div>
 </template>
@@ -34,10 +32,10 @@ export default {
   name: 'pageDairy',
   data () {
     return {
-      msg:'Undefined',
+      msg:'点击更改标题',
       show:false,
       isHide:false,
-      dairy:'默认内容'
+      dairy:''
     }
   },
   components:{
@@ -49,9 +47,9 @@ export default {
       this.isHide = !this.isHide;
     },
     on_submit:function () {
-
-      this.msg= '新一篇的标题未定义'
-      this.dairy = '再来一篇?'
+      bus.$emit('newFn',this.msg,this.dairy)
+      this.msg= '点击更改标题'
+      this.dairy = ''
     }
   },
 }
@@ -90,7 +88,7 @@ span{
   border-bottom: 4px solid #383e46;
 }
 .hidetitle{
-  color:#f8f8f8;
+  color:red;
 }
 textarea{
   margin-top: 3vh;

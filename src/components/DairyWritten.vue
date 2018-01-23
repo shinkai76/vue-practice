@@ -3,7 +3,7 @@
     <li class="container" v-for="(item,index) in items">
       <div>
         <div class="clearfix">
-          <input type="button" value="删除" class="btn btn-delete" >
+          <input @click="on_delete(index)" type="button" value="删除" class="btn btn-delete" >
           <a href="#">{{item.title}}</a>
         </div>
         <p>{{item.content}}</p>
@@ -29,7 +29,20 @@ export default {
       ]
     }
   },
-  props:['pMsg','pDairy'],
+  methods:{
+    on_delete:function (index) {
+      this.items.splice(index,1)
+    }
+  },
+  mounted:function () {
+    var me = this
+    bus.$on('newFn',function (pMsg,pDairy) {
+      me.items.push({
+        title : pMsg,
+        content : pDairy
+      })
+    })
+  }
 
 
 }
