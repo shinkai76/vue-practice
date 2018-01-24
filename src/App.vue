@@ -1,16 +1,14 @@
 <template>
-  <div id="app">
-    <a href="/">首页</a>
-    <router-view/>
-  </div>
+<div id="app">
+  <a href="/">首页</a>
+  <router-view/>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'App',
-
+  name: 'App'
 }
-
 </script>
 
 <style>
