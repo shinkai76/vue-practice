@@ -1,6 +1,6 @@
 <template>
 <div class="home">
-  <h1>今晚翻哪张牌子</h1>
+  <h1>お帰り</h1>
   <router-link to="/dairy">
     <MyCard card-name="dairy"></MyCard>
   </router-link>
