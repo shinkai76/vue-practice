@@ -12,10 +12,17 @@
   <input type="radio" v-model="wx" value="no" @click="on_no">抵制微信
   <div v-show="show">
     <div v-if="isWx">
-      可以留好友信息了
+      有缘再见
     </div>
     <div v-else>
-      有缘再见
+      <form>
+        <select v-model="which">
+          <option value="1">qq</option>
+          <option value="2">fc</option>
+        </select>
+        <input type="text" v-model.trim.number="number">
+        <input type="submit"  value="点我呀" class="btn" @click="on_submit">
+      </form>
     </div>
   </div>
 </div>
@@ -28,7 +35,10 @@ export default {
     return {
       wx: '',
       isWx: false,
-      show: false
+      show: false,
+      test: [],
+      number: '',
+      which: 1
     }
   },
   methods: {
@@ -39,6 +49,9 @@ export default {
     on_no: function () {
       this.show = true
       this.isWx = false
+    },
+    on_submit: function () {
+      alert('我将加您好友')
     }
   }
 }
