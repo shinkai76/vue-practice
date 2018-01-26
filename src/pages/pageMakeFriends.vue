@@ -21,7 +21,7 @@
           <option value="2">fc</option>
         </select>
         <input type="text" v-model.trim.number="number">
-        <input type="submit"  value="点我呀" class="btn" @click="on_submit">
+        <input type="submit" value="点我呀" class="btn" @click="on_submit">
       </form>
     </div>
   </div>
