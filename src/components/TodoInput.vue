@@ -39,6 +39,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+form{
+  margin-bottom: 60px;
+}
 .container {
     width: 50%;
     margin-bottom: 20px;
@@ -46,5 +49,6 @@ export default {
       width: 50%;
       float: right;
     }
+
 }
 </style>

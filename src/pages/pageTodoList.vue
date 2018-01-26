@@ -28,6 +28,5 @@ export default {
 .container {
     width: 70vw;
     margin: 0 auto;
-    border: 1px solid red;
 }
 </style>
