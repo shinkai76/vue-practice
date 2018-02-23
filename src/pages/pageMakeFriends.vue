@@ -3,10 +3,10 @@
   <h2>...认识一下?</h2>
   <div>
     <img src="../assets/photo.jpeg" alt="photo" class="photo" title="伪">
-    <h3>西伯利亚大公<br /> doge·<s>so·cold·colder·</s>coldest-cooler VII</h3>
+    <h3>Zheng Yuan<br /> <s>qq249333013</s></h3>
   </div>
   <hr>
-  <label>你用微信不?
+  <label>你用微信不? 其实就想测试一下条件显示
   </label>
   <input type="radio" v-model="wx" value="yes" @click="on_yes">用啊~
   <input type="radio" v-model="wx" value="no" @click="on_no">抵制微信
